@@ -8,15 +8,18 @@ namespace BustMyAss
 {
     class Program
     {
+
+        public static bool loser = false;
         static void Main(string[] args)
         {
+            Dealer dealer = new Dealer();
 
-            Cards cards = new Cards();
+            do
+            {
 
-            Console.WriteLine("This is me trying to learn Blackjack");
-            Console.WriteLine($"The cards are {cards.getFriendlyCards()}");
-
-
+                // Read values from 
+                
+            } while (!loser);
 
             Console.ReadKey();
         }

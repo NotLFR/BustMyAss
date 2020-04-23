@@ -8,6 +8,8 @@ namespace BustMyAss
         public int DealerCount { get; set; }
         public int PlayerCount { get; set; }
 
+        private bool stay = false;
+
         public Dealer()
         {
             Deck = new Cards();
@@ -19,15 +21,25 @@ namespace BustMyAss
 
         public void HitDealer()
         {
+            if (stay) return;
+
             Console.WriteLine($"Dealer hit with {DealerCount}...");
+
             DealerCount += Deck.getRandomCard();
 
             if (DealerCount > 21)
             {
                 Console.WriteLine($"Dealer busts with {DealerCount}!");
-            } else if (DealerCount >= 17)
+                Program.loser = true;
+            }
+            else if (DealerCount >= 17)
             {
-                Console.WriteLine("Dealer stays");
+                Console.WriteLine($"Dealer stays with {DealerCount}");
+                stay = true;
+            }
+            else
+            {
+                Console.WriteLine($"Dealer has {DealerCount}");
             }
         }
 
@@ -39,6 +51,7 @@ namespace BustMyAss
             if (PlayerCount > 21)
             {
                 Console.WriteLine("You busted");
+                Program.loser = true;
             }
             else
             {
