@@ -12,6 +12,9 @@ namespace BustMyAss
         {
             Console.WriteLine("Hello, World... \n \nThis is me trying to learn Blackjack");
             Console.WriteLine("The cards are");
+
+
+
             Console.ReadKey();
         }
 
