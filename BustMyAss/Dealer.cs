@@ -4,7 +4,7 @@ namespace BustMyAss
 {
     class Dealer
     {
-        private readonly Cards deck;
+        private Cards deck { get; }
         public int DealerCount { get; set; }
         public int PlayerCount { get; set; }
 
