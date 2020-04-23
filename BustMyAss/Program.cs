@@ -17,7 +17,7 @@ namespace BustMyAss
             do
             {
 
-                // Read values from 
+                // Read values from console input and determine whether they want to hit or stay
                 
             } while (!loser);
 
