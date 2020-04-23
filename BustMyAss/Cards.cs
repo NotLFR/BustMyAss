@@ -13,5 +13,10 @@ namespace BustMyAss
         {
             return AllTheCards[random.Next(0, AllTheCards.Count - 1)];
         }
+
+        public string getFriendlyCards()
+        {
+            return string.Join(", ", AllTheCards);
+        }
     }
 }

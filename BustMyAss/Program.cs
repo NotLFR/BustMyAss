@@ -10,8 +10,11 @@ namespace BustMyAss
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World... \n \nThis is me trying to learn Blackjack");
-            Console.WriteLine("The cards are");
+
+            Cards cards = new Cards();
+
+            Console.WriteLine("This is me trying to learn Blackjack");
+            Console.WriteLine($"The cards are {cards.getFriendlyCards()}");
 
 
 
